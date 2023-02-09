@@ -94,7 +94,10 @@
         <p class="lead">@T["Please answer a few questions to configure your site."]</p>
     </div>
 
-    <div asp-validation-summary="ModelOnly"></div>
+    <div asp-validation-summary="ModelOnly" class="alert alert-warning alert-dismissible fade show mt-2" role="alert">        
+        <h5 class="alert-heading">Cannot create site. Please correct the following errors</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
     @if (defaultRecipe == null)
     {
